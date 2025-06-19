@@ -1,0 +1,157 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    background: #f8fafd;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #1a237e;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.logo {
+    float: left;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    float: right;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff9800;
+}
+
+header .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(90deg, #1a237e 70%, #3949ab 100%);
+    color: #fff;
+    padding: 80px 0 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background: #ff9800;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #f57c00;
+}
+
+/* Features Section */
+.features {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.features .container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(26, 35, 126, 0.06);
+    width: 300px;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #1a237e;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background: #1a237e;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo, nav {
+        float: none;
+        text-align: center;
+        display: block;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .feature {
+        width: 90%;
+    }
+}
