@@ -11,7 +11,7 @@ h1 {
 .staff-list {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   margin-top: 40px;
 }
 .staff-profile {
@@ -21,7 +21,7 @@ h1 {
   padding: 24px 16px;
   text-align: center;
   width: 200px;
-  height: 200px;
+  
 }
 .profile-img {
   width: 120px;
