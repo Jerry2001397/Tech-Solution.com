@@ -32,7 +32,7 @@ h1 {
     align-items: center;
     transition: box-shadow 0.22s, transform 0.1s;
     backdrop-filter: blur(1px);
-    gap: 18px;
+    gap: 24px;
 }
 
 .staff-box:hover {
