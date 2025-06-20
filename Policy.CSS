@@ -1,8 +1,15 @@
 *{
     margin: 0%;
     padding: 0;
-    background-color: aqua;
+    background-color: darkgray;
 }
 .Blue text{
     color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18;
+}
+.Red-text{
+    color: red;
+    font-weight: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
