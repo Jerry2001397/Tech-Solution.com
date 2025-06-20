@@ -15,6 +15,7 @@ h1 {
   padding: 24px 16px;
   text-align: center;
   width: 200px;
+  position: relative;
   
 }
 .profile-img {
@@ -32,4 +33,6 @@ h2 {
 }
 *{
     background-color: rgb(240, 255, 251);
+    display: flex
+    
 }
