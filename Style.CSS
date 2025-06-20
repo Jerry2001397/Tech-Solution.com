@@ -29,6 +29,7 @@ header {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
+    font-display: inline;
 }
 
 nav {
@@ -244,7 +245,8 @@ nav {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 32px;
+  gap: 30px;
+  background: white;
 }
 
 .menu li {
