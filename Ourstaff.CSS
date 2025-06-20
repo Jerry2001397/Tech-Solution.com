@@ -8,14 +8,8 @@ h1 {
   text-align: center;
   color: #333;
 }
-.staff-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
 .staff-profile {
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
   padding: 24px 16px;
