@@ -181,10 +181,11 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    margin-left: 80px;
 }
 
 .menu-btn:hover, .menu-btn:focus {
-    background-color: #357ae8;
+    background-color: #e8358e;
 }
 
 .dropdown-content {
