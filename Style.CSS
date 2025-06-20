@@ -254,11 +254,11 @@ nav {
 
 .menu a {
   display: flex;
-  align-items: center;
+  align-items: right;
   padding: 8px 12px;
   text-decoration: none;
   color: #222;
-  font-size: 1.1em;
+  font-size: 14px;
   transition: color 0.2s;
   border-radius: 4px;
 }
