@@ -36,9 +36,9 @@ header {
     font-display: inline;
     background-color: rgb(61, 47, 255);
     align-content: center;
-    margin-left: 50px;
+    margin-left: 25px;
     margin-top: 0px;
-    width: 600px;
+    width: 350px;
     display: inline;
 }
 
@@ -104,7 +104,7 @@ header .container::after {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 50px
+    width: 400px
 }
 
 .features-container {
@@ -120,10 +120,10 @@ header .container::after {
     padding: 30px 25px;
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(26, 34, 126, 0.651);
-    width: 400px;
-    margin: 20px;
-    background-color: rgba(0, 0, 255, 0.274);
-}
+    width: 600px;
+   margin: 20px;
+   background-color: #3949ab;
+   display: relative;
     
 
 
