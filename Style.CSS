@@ -15,13 +15,13 @@ body {
 
 /* Container */
 .container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 55px;
+    align-content: center;
+    display: inline-flexbox;
+    
 }
 
 /* Header */
@@ -34,20 +34,222 @@ header {
 }
 
 .logo {
-  font-size: 2.7rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #3d2fff, #1a237e);
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(26, 34, 126, 0.10);
-  margin-right: 30px;
+    float: left;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-display: inline;
+    background-color: rgb(61, 47, 255);
+    align-content: center;
+    margin-left: 25px;
+    margin-top: 0px;
+    width: 350px;
+    display: inline;
 }
 
-/* Navigation Styles */
-nav.nav-links {
-  flex: 1;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff9800;
+}
+
+header .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(90deg, #1a237e 70%, #3949ab 100%);
+    color: #fff;
+    padding: 80px 0 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background: #ff9800;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #f57c00;
+}
+
+/* Features Section */
+.features {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 400px
+}
+
+.features-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #ffffffe3;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(26, 34, 126, 0.651);
+    width: 600px;
+   margin: 20px;
+   background-color: #3949ab;
+   display: relative;
+}
+
+
+.feature h3 {
+    color: #1a237e;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background: #1a237e;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features .container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    
+}
+        
+
+@media (max-width: 600px) {
+    .logo, nav {
+        float: none;
+        text-align: center;
+        display: block;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .feature {
+        width: 90%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.menu-container {
+    position: fixed;
+    top: 20px;
+    right: 70px;
+    z-index: 1000;
+    display: block;
+}
+
+.menu-btn {
+    background-color: #4285f4;
+    color: white;
+    padding: 14px 24px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-btn:hover, .menu-btn:focus {
+    background-color: #e8358e;
+}
+
+.dropdown-content {
+    display: none;
+    position:inherit;
+    right: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 1;
+    border-radius: 0 0 6px 6px;
+    margin-top: 2px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu-container:hover .dropdown-content,
+.menu-container:focus-within .dropdown-content {
+    display: block;
+}
+.Jerry-right{
+    right: 60px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding-bottom: 12px;
+}
+
+nav {
   display: flex;
   justify-content: flex-end;
 }
