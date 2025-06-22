@@ -1,5 +1,9 @@
 *{
     margin: 0%;
     padding: 0%;
-    background-color: rgb(0, 255, 255);
+    background-color:whitesmoke;
+}
+.LOGO{
+    background-color: ghostwhite;
+    float: left;
 }
