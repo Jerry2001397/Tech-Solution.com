@@ -128,11 +128,11 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 850px) {
+@media (max-width: 950px) {
     .features .container {
         flex-direction: column;
         align-items: center;
-        min-width: 550px;
+        min-width: 600px;
     }
     
 }
