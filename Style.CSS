@@ -97,7 +97,7 @@ header .container::after {
     align-items: flex-start;
 }
 
-.features .container {
+.features-container {
     display: flex;
     gap: 40px;
     justify-content: center;
