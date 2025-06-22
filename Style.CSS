@@ -38,6 +38,7 @@ header {
     align-content: center;
     margin-left: 50px;
     margin-top: 0px;
+    width: 30%;
 }
 
 .nav-links {
@@ -120,7 +121,7 @@ header .container::after {
     width: 300px;
     text-align: center;
     gap: 40px;
-    margin: 40px;
+    margin: 30px;
     display: inline-block;
 }
 
