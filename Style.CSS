@@ -38,7 +38,8 @@ header {
     align-content: center;
     margin-left: 50px;
     margin-top: 0px;
-    width: 30%;
+    width: 600px;
+    display: inline;
 }
 
 .nav-links {
@@ -103,7 +104,7 @@ header .container::after {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
+    width: 50px
 }
 
 .features-container {
@@ -114,16 +115,17 @@ header .container::after {
 }
 
 .feature {
-    background: #fff;
+
+    background: #ffffffe3;
     padding: 30px 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(26, 35, 126, 0.06);
-    width: 300px;
-    text-align: center;
-    gap: 40px;
-    margin: 30px;
-    display: inline-block;
+    box-shadow: 0 2px 12px rgba(26, 34, 126, 0.651);
+    width: 400px;
+    margin: 20px;
+    background-color: rgba(0, 0, 255, 0.274);
 }
+    
+
 
 .feature h3 {
     color: #1a237e;
@@ -168,9 +170,7 @@ footer {
         width: 90%;
     }
 }
-.feature{
-    background-color: bisque;
-}
+
 body {
     font-family: Arial, sans-serif;
     background: #f8f8f8;
