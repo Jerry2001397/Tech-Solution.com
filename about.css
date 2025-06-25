@@ -212,3 +212,17 @@ footer {
     gap: 13px;
   }
 }
+
+.logo {
+    float: left;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-display: inline;
+    background-color: rgb(61, 47, 255);
+    align-content: center;
+    margin-left: 25px;
+    margin-top: 0px;
+    width: 350px;
+    display: inline;
+}
