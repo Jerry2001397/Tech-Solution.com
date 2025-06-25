@@ -41,8 +41,8 @@ h1 {
 }
 
 .staff-img {
-    width: 68px;
-    height: 68px;
+    width: 100px;
+    height: 90px;
     object-fit: cover;
     border-radius: 50%;
     border: 2.5px solid #5f72bd;
