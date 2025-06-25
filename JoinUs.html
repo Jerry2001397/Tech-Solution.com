@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jpin US</title>
+  <meta charset="UTF-8">
+  <title>Tech Solution Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      padding: 30px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      max-width: 600px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #2b7cff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #1a5ed8;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome</h1>
+
+  <div class="form-container">
+    <h2>Tech Solution - Application Form</h2>
+
+    <form action="#" method="POST">
+
+      <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="first_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="last_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Phone/Contact</label>
+        <input type="tel" id="contact" name="contact" required>
+      </div>
+
+      <div class="form-group">
+        <label for="education">Educational Level</label>
+        <select id="education" name="education_level" required>
+          <option value="">-- Select --</option>
+          <option value="High School">High School</option>
+          <option value="Diploma">Diploma</option>
+          <option value="Bachelor's">Bachelor's Degree</option>
+          <option value="Master's">Master's Degree</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tech Skill(s)</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="skills" value="Web Development"> Web Development</label>
+          <label><input type="checkbox" name="skills" value="Networking"> Networking</label>
+          <label><input type="checkbox" name="skills" value="Database"> Database Management</label>
+          <label><input type="checkbox" name="skills" value="CCTV"> CCTV Installation</label>
+          <label><input type="checkbox" name="skills" value="Tech Support"> Tech Support</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="specialization">Area of Specialization</label>
+        <textarea id="specialization" name="specialization" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="value">What value can you bring to Tech Solution?</label>
+        <textarea id="value" name="value_contribution" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+
+    </form>
+  </div>
+
 </body>
 </html>
