@@ -14,55 +14,57 @@ body {
   background: #f4f4f4;
 }
 
-header {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding-bottom: 12px;
+/* Position the menu in the top-right */
+.menu-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  text-align: right;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
+/* Hide the toggle checkbox */
+#menu-toggle {
+  display: none;
 }
 
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-
-.menu li {
+/* Style for the menu button */
+.menu-icon {
+  background-color: #0056d2;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
   display: inline-block;
 }
 
-.menu a {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  background: #1976d2;
-  color: #fff;
+/* Menu items hidden by default */
+.menu {
+  display: none;
+  background-color: #ffffff;
+  margin-top: 8px;
   border-radius: 6px;
-  padding: 9px 20px;
-  font-size: 1.02rem;
-  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Each menu link */
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #007bff;
   text-decoration: none;
-  border: none;
-  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border-bottom: 1px solid #eee;
 }
 
-.menu a i {
-  font-size: 1.1em;
+.menu a:hover {
+  background-color: #f0f0f0;
 }
 
-.menu a:hover,
-.menu a:focus {
-  background: #0d47a1;
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(30, 64, 255, 0.13);
+/* Show the menu when checkbox is checked */
+#menu-toggle:checked + .menu-icon + .menu {
+  display: block;
 }
-
 /* Hero Section */
 .hero {
   background: linear-gradient(90deg, #1a237e 70%, #3949ab 100%);
