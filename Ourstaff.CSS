@@ -6,15 +6,16 @@ bbody {
     padding: 0;
 }
 
-h1 {
+.Staff{
     text-align: center;
     margin-top: 30px;
+    margin-left: 300;
     color: #1a237e;
     text-shadow: 1px 1px 7px #c6cfff;
 }
 
 .staff-list {
-    width: 400px;
+    width: 350px;
     margin: 40px auto;
     display: flex;
     flex-direction: column;
@@ -41,7 +42,7 @@ h1 {
 }
 
 .staff-img {
-    width: 100px;
+    width: 90px;
     height: 90px;
     object-fit: cover;
     border-radius: 50%;
@@ -80,7 +81,7 @@ h1 {
     align-content: center;
     margin-left: 1px;
     margin-top: 10px;
-    width: 140px;
+    width: 150px;
     display: inline;
 }
 /* Position the menu in the top-right */
