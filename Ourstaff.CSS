@@ -9,7 +9,7 @@ bbody {
 .Staff{
     text-align: center;
     margin-top: 30px;
-    margin-left: 200;
+    margin-left: 100;
     color: #1a237e;
     text-shadow: 1px 1px 7px #c6cfff;
 }
@@ -80,7 +80,7 @@ bbody {
     background-color: rgb(61, 47, 255);
     align-content: center;
     margin-left: 1px;
-    margin-top: 10px;
+    margin-top: 3px;
     width: 150px;
     display: inline;
 }
