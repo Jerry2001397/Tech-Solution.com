@@ -213,6 +213,10 @@ footer {
     width: 100%;
     gap: 13px;
   }
+  .feature-container{
+  margin-top: 10px;
+  
+}
 }
 
 .logo {
