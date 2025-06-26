@@ -13,7 +13,9 @@ body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
 }
-
+.Color{
+  background-color: rgba(0, 206, 209, 0.885);
+}
 /* Position the menu in the top-right */
 .menu-container {
   position: fixed;
@@ -217,18 +219,4 @@ footer {
   margin-top: 10px;
   
 }
-}
-
-.logo {
-    float: left;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-display: inline;
-    background-color: rgb(61, 47, 255);
-    align-content: center;
-    margin-left: 1px;
-    margin-top: 10px;
-    width: 140px;
-    display: inline;
 }
