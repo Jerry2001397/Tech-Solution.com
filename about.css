@@ -217,15 +217,15 @@ footer {
 
 .logo {
     float: left;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
     font-display: inline;
     background-color: rgb(61, 47, 255);
     align-content: center;
     margin-left: 1px;
-    margin-top: 0px;
-    width: 280px;
+    margin-top: 10px;
+    width: 150px;
     display: inline;
 }
 .H-guy{
