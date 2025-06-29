@@ -183,7 +183,7 @@ btn::after {
 
 /* Footer */
 footer {
-    background: #1a237e;
+    background: #FCE903;
     color: #fff;
     text-align: center;
     padding: 18px 0;
@@ -263,7 +263,7 @@ header {
 }
 
 .cta-btn {
-  background: #ff9800;
+  background: #FCE903;
   color: #fff;
   padding: 15px 40px;
   border-radius: 30px;
@@ -277,7 +277,7 @@ header {
 }
 
 .cta-btn:hover {
-  background: #f57c00;
+  background: #FCE903;
 }
 
 /* Features Section */
@@ -307,7 +307,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-top: 5px solid #3949ab;
+  border-top: 5px solid #FCE903;
   transition: transform 0.18s, box-shadow 0.18s;
 }
 
@@ -329,7 +329,7 @@ header {
 
 /* Footer */
 footer {
-  background: #1a237e;
+  background: #FCE903;
   color: #fff;
   text-align: center;
   padding: 18px 0;
