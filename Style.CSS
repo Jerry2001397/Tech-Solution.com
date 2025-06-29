@@ -177,7 +177,7 @@ btn::after {
 
 
 .feature h3 {
-    color: #1a237e;
+    color: hwb(211 0% 0% / 0.792);
     margin-bottom: 15px;
 }
 
