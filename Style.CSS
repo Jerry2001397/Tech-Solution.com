@@ -14,6 +14,7 @@ body {
 }
 .Emma{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: #FCE903;
 }
 .Mr-Jerry{
   background-color:#FCE903;
@@ -114,7 +115,7 @@ header .container::after {
 }
 
 .cta-btn {
-    background: #ff9800;
+  background-color:#FCE903;
     color: #fff;
     padding: 15px 40px;
     border-radius: 30px;
