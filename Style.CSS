@@ -14,7 +14,6 @@ body {
 }
 .Emma{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-color: #FCE903;
 }
 .Mr-Jerry{
   background-color:#FCE903;
@@ -126,7 +125,8 @@ header .container::after {
 }
 
 .cta-btn:hover {
-    background: #f57c00;
+  background-color:#FCE903;
+  
 }
 btn::after {
   content: '→'; /* arrow */
@@ -139,7 +139,8 @@ btn::after {
 }
 
 .btn:hover {
-  background-color: #e57c00;
+  background-color:#FCE903;
+  background-color:#FCE903;
   transform: translateX(4px);
 }
 
@@ -167,10 +168,10 @@ btn::after {
     background: #ffffffe3;
     padding: 30px 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(26, 34, 126, 0.651);
+    box-shadow: 0 2px 12px #FCE903;
     width: 600px;
    margin: 20px;
-   background-color: #3949ab;
+   background-color: hsl(191, 50%, 45%);
    display: relative;
 }
 
