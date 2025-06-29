@@ -12,8 +12,11 @@ body {
   min-height: 100vh;
   line-height: 1.6;
 }
+.Emma{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 .Mr-Jerry{
-  background-color: darkseagreen;
+  background-color: #436AFA;
 }
 /* Position the menu in the top-right */
 .menu-container {
