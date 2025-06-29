@@ -97,7 +97,7 @@ header .container::after {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(90deg, #1a237e 70%, #3949ab 100%);
+    background: linear-gradient(90deg, #1a6d7e 70%, #3949ab 100%);
     color: #fff;
     padding: 80px 0 60px 0;
     text-align: center;
