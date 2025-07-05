@@ -279,7 +279,7 @@ header {
 
 /* Footer */
 footer {
-  background: #FCE903;
+  background: oklab(61.112% -0.05004 -0.20203 / 0.434);
   color: #fff;
   text-align: center;
   padding: 18px 0;
@@ -375,10 +375,11 @@ footer {
     .service-title {
       font-size: 1.12rem;
       font-weight: 600;
-      color: #333;
+      color: black;
     }
     .service-desc {
       font-size: 0.98rem;
       color: #555;
       max-width: 90%;
     }
+    
