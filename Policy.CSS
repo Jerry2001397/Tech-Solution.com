@@ -1,9 +1,9 @@
 *{
     margin: 0%;
     padding: 0;
-    background-color: darkgray;
+    background-color: white;
 }
-.Blue text{
+.Blue-text{
     color: blue;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18;

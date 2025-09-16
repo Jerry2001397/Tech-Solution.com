@@ -6,15 +6,16 @@ bbody {
     padding: 0;
 }
 
-h1 {
+.Staff{
     text-align: center;
     margin-top: 30px;
-    color: #1a237e;
+    margin-left: 100;
+    color: hsla(235, 66%, 30%, 0.133);
     text-shadow: 1px 1px 7px #c6cfff;
 }
 
 .staff-list {
-    width: 400px;
+    width: 350px;
     margin: 40px auto;
     display: flex;
     flex-direction: column;
@@ -22,7 +23,7 @@ h1 {
 }
 
 .staff-box {
-    background: rgba(255, 255, 255, 0.92);
+    background:whitesmoke;
     border: 2px solid #3949ab;
     border-radius: 14px;
     box-shadow: 0 5px 20px rgba(60,60,60,0.11);
@@ -41,8 +42,8 @@ h1 {
 }
 
 .staff-img {
-    width: 68px;
-    height: 68px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     border-radius: 50%;
     border: 2.5px solid #5f72bd;
@@ -58,7 +59,7 @@ h1 {
 .staff-name {
     font-size: 1.2em;
     font-weight: bold;
-    color: #263238;
+    color: hsla(200, 19%, 18%, 0);
     margin-bottom: 5px;
     text-shadow: 0 1px 3px #e0e7ff;
 }
@@ -68,5 +69,22 @@ h1 {
     color: #546e7a;
 }
 *{
-  background-color: rgb(220, 255, 232);
+  background-color: #7CACF0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show the menu when checkbox is checked */
+#menu-toggle:checked + .menu-icon + .menu {
+  display: block;
 }
