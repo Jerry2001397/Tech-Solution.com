@@ -423,26 +423,30 @@ footer a:hover {
   /* Show hamburger menu */
   .menu-toggle {
     display: flex;
+    margin-left: auto;
+    position: relative;
   }
 
   /* Mobile Navigation */
   nav {
     position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
+    top: calc(100% + 8px);
+    right: 20px;
+    left: auto;
+    width: 260px;
     background: var(--bg-white);
     flex-direction: column;
-    padding: 0;
+    padding: 8px 0;
     box-shadow: var(--shadow-md);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    border-top: 1px solid var(--border-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
   }
 
   nav.active {
-    max-height: 400px;
+    max-height: 500px;
   }
 
   .nav-links {
