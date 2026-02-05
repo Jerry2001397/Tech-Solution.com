@@ -1,182 +1,446 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tech Solution Application Form</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Our Team - Tech Bridge Liberia</title>
+  <link rel="stylesheet" href="./Style.CSS">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #eef2f3;
-      padding: 30px;
-      background-color: darkturquoise;
-    }
-
-    .form-container {
-      background-color: #fff;
-      max-width: 500px;
-      margin: auto;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
+    /* Join Us Page Specific Styles */
+    .join-hero {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1a4d7a 100%);
+      color: var(--bg-white);
+      padding: 100px 20px;
       text-align: center;
-      color: #333;
+    }
+
+    .join-hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .join-hero p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .join-content {
+      padding: 80px 20px;
+      background: var(--bg-white);
+    }
+
+    .join-content .container {
+      flex-direction: column;
+      max-width: 900px;
+    }
+
+    .form-wrapper {
+      background: var(--bg-white);
+      padding: 60px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    }
+
+    .form-wrapper h2 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .form-wrapper > p {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
     }
 
     .form-group {
-      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
+    .form-group label {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
+    .form-group label::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
     }
 
-    textarea {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 18px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      color: var(--text-dark);
+      background: var(--bg-white);
+      font-weight: 500;
+    }
+
+    .form-group input:hover,
+    .form-group select:hover,
+    .form-group textarea:hover {
+      border-color: #bbb;
+      background: #fafafa;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 4px rgba(233, 69, 96, 0.15);
+    }
+
+    .form-group textarea {
       resize: vertical;
-      min-height: 80px;
+      min-height: 120px;
+      grid-column: 1 / -1;
     }
 
     .checkbox-group,
     .radio-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 20px;
+      margin-top: 8px;
+      grid-column: 1 / -1;
     }
 
     .checkbox-group label,
     .radio-group label {
-      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: var(--text-dark);
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: normal;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .checkbox-group label::before,
+    .radio-group label::before {
+      content: none;
+    }
+
+    .checkbox-group input[type="checkbox"],
+    .radio-group input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--secondary-color);
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
     }
 
     .submit-btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background-color: #2b7cff;
-      color: white;
-      font-size: 16px;
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, var(--secondary-color), #ff6b7a);
+      color: var(--bg-white);
+      padding: 16px 40px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
       cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(233, 69, 96, 0.25);
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: left 0.3s ease;
     }
 
     .submit-btn:hover {
-      background-color: #1a5ed8;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(233, 69, 96, 0.35);
+    }
+
+    .submit-btn:hover::before {
+      left: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .join-hero h1 {
+        font-size: 2rem;
+      }
+
+      .form-wrapper {
+        padding: 40px 30px;
+      }
+
+      .form-wrapper h2 {
+        font-size: 1.8rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .join-hero {
+        padding: 60px 20px;
+      }
+
+      .join-hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .join-hero p {
+        font-size: 1rem;
+      }
+
+      .join-content {
+        padding: 40px 16px;
+      }
+
+      .form-wrapper {
+        padding: 30px 20px;
+      }
+
+      .form-wrapper h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+
+      .form-wrapper > p {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+      }
+
+      .form-grid {
+        gap: 16px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 12px 12px;
+        font-size: 0.9rem;
+      }
+
+      .form-group textarea {
+        min-height: 100px;
+      }
+
+      .submit-btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
 <body>
-     <header>
-<nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar"> <div class="container-fluid"> <img src="./image file/Tech-Solution LOGO.png" height="35" width="33">Tech solution</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span> </button> 
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel"> 
-        <div class="offcanvas-header"> <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Check our menu</h5> <button type="button" 
-            class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button> </div> <div class="offcanvas-body"> 
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3"> <li class="nav-item">
-     <a class="nav-link active" aria-current="page" href="index.html">Home</a> 
-    </li> <li class="nav-item"> <a class="nav-link" href="index about.html">About</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Index Service.html">Services</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Our Staff.html">Our staffs</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Projucts.html">Our products</a> </li>
-     <li class="nav-item"> <a class="nav-link" href="Policy.html">Policy</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact Us</a> </li>
-    <input class="form-control me-2" 
-    type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success" type="submit"> <a href="https://www.google.com.">Search</a></button> </form> </div> </div> </div> </nav>
-   </header>
+  <header>
+    <div class="container">
+      <h1 class="logo">Tech Bridge LIberia-TBL</h1>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./index about.html">About</a></li>
+          <li><a href="./Index Service.html">Services</a></li>
+          <li><a href="./Our Staff.html">Our Staffs</a></li>
+          <li><a href="./Contact.html">Contact</a></li>
+          <li><a href="./Policy.html">Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="join-hero">
+      <h1>Join Our Team</h1>
+      <p>Be part of our mission to transform technology and innovation in Liberia</p>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="join-content">
+      <div class="container">
+        <div class="form-wrapper">
+          <h2>Career Application Form</h2>
+          <p>Tell us about yourself and how you can contribute to Tech Bridge Liberia</p>
+
+          <form id="joinForm" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="first_name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="last_name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+
+              <div class="form-group">
+                <label for="education">Educational Level *</label>
+                <select id="education" name="education_level" required>
+                  <option value="">-- Select Your Education Level --</option>
+                  <option value="High School">High School</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Bachelor's">Bachelor's Degree</option>
+                  <option value="Master's">Master's Degree</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="experience">Years of Experience *</label>
+                <input type="number" id="experience" name="experience" min="0" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label>Technical Skills *</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="skills" value="Web Development"> Web Development</label>
+                  <label><input type="checkbox" name="skills" value="Networking"> Networking</label>
+                  <label><input type="checkbox" name="skills" value="Database"> Database Management</label>
+                  <label><input type="checkbox" name="skills" value="CCTV"> CCTV Installation</label>
+                  <label><input type="checkbox" name="skills" value="Tech Support"> Tech Support</label>
+                  <label><input type="checkbox" name="skills" value="Training"> Training &amp; Education</label>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="gender">Gender *</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="gender" value="Male" required> Male</label>
+                  <label><input type="radio" name="gender" value="Female"> Female</label>
+                  <label><input type="radio" name="gender" value="Other"> Prefer not to say</label>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="specialization">Area of Specialization *</label>
+                <textarea id="specialization" name="specialization" placeholder="Describe your primary area of expertise..." required></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="value">What value can you bring to Tech Bridge Liberia? *</label>
+                <textarea id="value" name="value_contribution" placeholder="Tell us about your unique contributions and why you're interested in joining us..." required></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="portfolio">Portfolio/Website URL (Optional)</label>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
+              </div>
+
+              <button type="submit" class="submit-btn">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Tech Bridge Liberia-TBL<br>
+        All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
     
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
 
+    // Close menu when a link is clicked
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+      });
+    });
 
-  <div class="form-container">
-    <h2>Tech Solution - Application Form</h2>
-
-    <form action="#" method="POST">
-
-      <div class="form-group">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="first_name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="last_name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="contact">Phone/Contact</label>
-        <input type="tel" id="contact" name="contact" required>
-      </div>
-
-      <div class="form-group">
-        <label for="education">Educational Level</label>
-        <select id="education" name="education_level" required>
-          <option value="">-- Select --</option>
-          <option value="High School">High School</option>
-          <option value="Diploma">Diploma</option>
-          <option value="Bachelor's">Bachelor's Degree</option>
-          <option value="Master's">Master's Degree</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Tech Skill(s)</label>
-        <div class="checkbox-group">
-          <label><input type="checkbox" name="skills" value="Web Development"> Web Development</label>
-          <label><input type="checkbox" name="skills" value="Networking"> Networking</label>
-          <label><input type="checkbox" name="skills" value="Database"> Database Management</label>
-          <label><input type="checkbox" name="skills" value="CCTV"> CCTV Installation</label>
-          <label><input type="checkbox" name="skills" value="Tech Support"> Tech Support</label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="specialization">Area of Specialization</label>
-        <textarea id="specialization" name="specialization" required></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Gender</label>
-        <div class="radio-group">
-          <label><input type="radio" name="gender" value="Male" required> Male</label>
-          <label><input type="radio" name="gender" value="Female"> Female</label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="value">What value can you bring to Tech Solution?</label>
-        <textarea id="value" name="value_contribution" required></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn">Submit Application</button>
-
-    </form>
-  </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
- integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    // Form submission handler
+    document.getElementById('joinForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your application! We will review it and get back to you soon.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>

@@ -55,7 +55,7 @@ body {
 .about-section h2 {
   color: var(--primary-color);
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -66,6 +66,7 @@ body {
   line-height: 1.8;
   margin-bottom: 24px;
   text-align: justify;
+  font-weight: 600;
 }
 
 .section-content p:last-child {
@@ -98,12 +99,13 @@ body {
   text-align: center;
   max-width: 700px;
   border-top: 4px solid var(--secondary-color);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
 }
 
 .value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(233, 69, 96, 0.15);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(233, 69, 96, 0.25);
 }
 
 .value-icon {
@@ -121,7 +123,7 @@ body {
 .value-card h2 {
   color: var(--primary-color);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 24px;
 }
 
@@ -130,6 +132,7 @@ body {
   font-size: 1.05rem;
   line-height: 1.8;
   margin: 0;
+  font-weight: 600;
 }
 
 /* ===================================
@@ -148,7 +151,7 @@ body {
 .goals-section h2 {
   color: var(--primary-color);
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -165,14 +168,15 @@ body {
   padding: 40px 32px;
   border-radius: 12px;
   border: 2px solid var(--border-color);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   padding-top: 80px;
+  transform-style: preserve-3d;
 }
 
 .goal-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-12px) scale(1.03) rotateY(2deg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
   border-color: var(--secondary-color);
 }
 
@@ -197,7 +201,7 @@ body {
 .goal-card h3 {
   color: var(--primary-color);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 16px;
   margin-top: 0;
 }
@@ -207,6 +211,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
+  font-weight: 600;
 }
 
 /* ===================================
@@ -225,7 +230,7 @@ body {
 .values-highlight h2 {
   color: var(--bg-white);
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -243,15 +248,15 @@ body {
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   backdrop-filter: blur(10px);
 }
 
 .value-item:hover {
   background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.05) translateX(5px);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .value-item h3 {
@@ -259,6 +264,7 @@ body {
   font-size: 1.4rem;
   margin-bottom: 12px;
   margin-top: 0;
+  font-weight: 700;
 }
 
 .value-item p {
@@ -266,6 +272,7 @@ body {
   font-size: 0.95rem;
   margin: 0;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 /* ===================================
@@ -286,7 +293,7 @@ body {
 .cta-section h2 {
   color: var(--primary-color);
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
 }
 
@@ -294,6 +301,7 @@ body {
   color: var(--text-light);
   font-size: 1.1rem;
   margin: 0;
+  font-weight: 600;
 }
 
 .cta-section div {
@@ -313,7 +321,7 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   border: 2px solid var(--secondary-color);
   transition: all 0.3s ease;
   display: inline-block;
@@ -324,8 +332,8 @@ body {
 .cta-btn:hover {
   background: transparent;
   color: var(--secondary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(233, 69, 96, 0.3);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(233, 69, 96, 0.35);
 }
 
 .cta-btn.secondary {
