@@ -408,6 +408,334 @@ footer a:hover {
 }
 
 /* ===================================
+   ABOUT PAGE STYLES
+   =================================== */
+.about-section {
+  padding: 80px 20px;
+  background: var(--bg-white);
+}
+
+.about-section .container {
+  flex-direction: column;
+  max-width: 900px;
+}
+
+.about-section h2 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-content p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+/* Value Sections - Mission & Vision */
+.value-section {
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-section.mission {
+  background: linear-gradient(135deg, rgba(15, 52, 96, 0.08) 0%, rgba(233, 69, 96, 0.08) 100%);
+}
+
+.value-section.vision {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(233, 69, 96, 0.08) 100%);
+}
+
+.value-card {
+  background: var(--bg-white);
+  padding: 60px 50px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  max-width: 700px;
+  border-top: 4px solid var(--secondary-color);
+}
+
+.value-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.value-card h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.value-card p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Goals Section */
+.goals-section {
+  padding: 80px 20px;
+  background: var(--bg-white);
+}
+
+.goals-section .container {
+  flex-direction: column;
+  max-width: 1200px;
+}
+
+.goals-section h2 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  width: 100%;
+}
+
+.goal-card {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+  padding: 40px 32px;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+  position: relative;
+  padding-top: 80px;
+}
+
+.goal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary-color);
+}
+
+.goal-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  color: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.goal-card h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.goal-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Core Values Highlight */
+.values-highlight {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1a4d7a 100%);
+}
+
+.values-highlight .container {
+  flex-direction: column;
+  max-width: 1200px;
+}
+
+.values-highlight h2 {
+  color: var(--bg-white);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  width: 100%;
+}
+
+.value-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.value-item h3 {
+  color: var(--bg-white);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.value-item p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(233, 69, 96, 0.1) 100%);
+  text-align: center;
+}
+
+.cta-section .container {
+  flex-direction: column;
+  max-width: 700px;
+  gap: 30px;
+}
+
+.cta-section h2 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cta-section p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* ===================================
+   BOOKING FORM SECTION
+   =================================== */
+.booking {
+  background: linear-gradient(135deg, rgba(15, 52, 96, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+  padding: 80px 20px;
+}
+
+.booking .container {
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.booking-content {
+  background: var(--bg-white);
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.booking-content h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.booking-content > p {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  background: var(--bg-white);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--text-light);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--secondary-color), #ff6b7a);
+  color: var(--bg-white);
+  padding: 16px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(233, 69, 96, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ===================================
    RESPONSIVE DESIGN
    =================================== */
 @media (max-width: 768px) {
@@ -511,6 +839,50 @@ footer a:hover {
   .feature {
     padding: 32px 24px;
   }
+
+  /* Booking */
+  .booking {
+    padding: 60px 20px;
+  }
+
+  .booking-content {
+    padding: 40px 24px;
+  }
+
+  .booking-content h2 {
+    font-size: 1.6rem;
+  }
+
+  /* About Page */
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .value-card {
+    padding: 40px 30px;
+  }
+
+  .value-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .goals-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .goals-grid {
+    gap: 24px;
+  }
+
+  .values-highlight h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -556,6 +928,103 @@ footer a:hover {
 
   .feature p {
     font-size: 0.9rem;
+  }
+
+  /* Booking */
+  .booking {
+    padding: 40px 16px;
+  }
+
+  .booking-content {
+    padding: 30px 20px;
+  }
+
+  .booking-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .booking-form {
+    gap: 16px;
+  }
+
+  .submit-btn {
+    padding: 14px 32px;
+    font-size: 0.9rem;
+  }
+
+  /* About Page Mobile */
+  .about-section {
+    padding: 40px 16px;
+  }
+
+  .about-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-content p {
+    font-size: 0.95rem;
+  }
+
+  .value-section {
+    padding: 50px 16px;
+  }
+
+  .value-card {
+    padding: 30px 20px;
+  }
+
+  .value-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .value-card p {
+    font-size: 0.95rem;
+  }
+
+  .goal-card {
+    padding: 35px 20px 20px 20px;
+  }
+
+  .goal-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+
+  .goal-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .goal-card p {
+    font-size: 0.9rem;
+  }
+
+  .values-highlight {
+    padding: 50px 16px;
+  }
+
+  .values-highlight h2 {
+    font-size: 1.4rem;
+  }
+
+  .value-item {
+    padding: 30px 20px;
+  }
+
+  .value-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .cta-section {
+    padding: 50px 16px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-section p {
+    font-size: 0.95rem;
   }
 
   footer {
