@@ -423,8 +423,12 @@ footer a:hover {
   /* Show hamburger menu */
   .menu-toggle {
     display: flex;
-    margin-left: auto;
-    position: relative;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    z-index: 1001;
   }
 
   /* Mobile Navigation */
