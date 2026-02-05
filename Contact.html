@@ -1,64 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <link rel="stylesheet" href="Contact.CSS" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Tech Bridge Liberia</title>
+  <link rel="stylesheet" href="./Style.CSS">
+  <link rel="stylesheet" href="./Contact.CSS">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-     <header>
-<nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar"> <div class="container-fluid"> <img src="./image file/Tech-Solution LOGO.png" height="35" width="33">Tech solution</a> 
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span> </button> 
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel"> 
-        <div class="offcanvas-header"> <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Check our menu</h5> <button type="button" 
-            class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button> </div> <div class="offcanvas-body"> 
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3"> <li class="nav-item">
-     <a class="nav-link active" aria-current="page" href="index.html">Home</a> 
-    </li> <li class="nav-item"> <a class="nav-link" href="index about.html">About</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Index Service.html">Services</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Our Staff.html">Our staffs</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Projucts.html">Our products</a> </li>
-     <li class="nav-item"> <a class="nav-link" href="Policy.html">Policy</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact Us</a> </li>
-    <input class="form-control me-2" 
-    type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success" type="submit"> <a href="https://www.google.com.">Search</a></button> </form> </div> </div> </div> </nav>
-   </header>
-    
-<br>
-  <div class="contact-page">
-    <h1>Contact Us</h1>
-    <br>
-    <p>You can reach us through any of these platforms:</p>
-
-    <div class="contact-boxes">
-      <a href="https://www.facebook.com/https://www.facebook.com/share/16a5V2PkYK/?mibextid=wwXIfr" target="_blank" class="contact-card facebook">
-        <i class="fab fa-facebook-f"></i> Facebook
-      </a>
-
-      <a href="https://www.instagram.com/yourprofile" target="_blank" class="contact-card instagram">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-
-      <a href="https://wa.me/+231888725525" target="_blank" class="contact-card whatsapp">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-
-      <a href="https://www.linkedin.com/in/" target="_blank" class="contact-card linkedin">
-        <i class="fab fa-linkedin-in"></i> LinkedIn
-      </a>
-
-      <a href="mailto:techsolution859@gmail.com" class="contact-card email">
-        <i class="fas fa-envelope"></i> Email
-      </a>
+  <header>
+    <div class="container">
+      <h1 class="logo">Tech Bridge LIberia-TBL</h1>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./index about.html">About</a></li>
+          <li><a href="./Index Service.html">Services</a></li>
+          <li><a href="./Our Staff.html">Our Staffs</a></li>
+          <li><a href="./Contact.html">Contact</a></li>
+          <li><a href="./Policy.html">Policy</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-  <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg> </a> </div> </div> </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
- integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </header>
+
+  <main>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <h1>Get In Touch</h1>
+      <p>We're here to help and answer any questions you might have</p>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Contact Form -->
+          <div class="contact-form-section">
+            <h2>Send us a Message</h2>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us more about your inquiry..." required></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info-section">
+            <h2>Contact Information</h2>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Location</h3>
+                <p>Monrovia, Liberia</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="info-content">
+                <h3>Phone</h3>
+                <p><a href="tel:+231888725525">+231 88 872 5525</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p><a href="mailto:techbridgeliberia@gmail.com">techbridgeliberia@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="info-content">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 3:00 PM<br>Sunday: Closed</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/16a5V2PkYK/?mibextid=wwXIfr" target="_blank" class="social-btn facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="social-btn instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/+231888725525" target="_blank" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/tech-bridge-liberia" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:techbridgeliberia@gmail.com" class="social-btn email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>What services do you offer?</h3>
+            <p>We provide comprehensive IT services including computer training, hardware support, software solutions, CCTV installation, and professional training programs.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How quickly can you respond?</h3>
+            <p>We aim to respond to all inquiries within 24 hours during business days. Urgent matters may be addressed within 2-4 hours.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do you offer remote support?</h3>
+            <p>Yes, we provide remote technical support for software issues and consultations. On-site support is available for hardware installations.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What are your payment terms?</h3>
+            <p>We accept various payment methods including bank transfers, mobile money, and cash. Payment terms can be negotiated based on project scope.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Tech Bridge Liberia-TBL<br>
+        All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+      });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+      });
+    }
+  </script>
 </body>
 </html>
