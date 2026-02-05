@@ -1,81 +1,141 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Staffs</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="Ourstaff.CSS">
+    <title>Our Team - Tech Bridge Liberia</title>
+    <link rel="stylesheet" href="./Style.CSS">
+    <link rel="stylesheet" href="./Staff.CSS">
 </head>
 <body>
-   <header>
-<nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar"> <div class="container-fluid"> <img src="./image file/Tech-Solution LOGO.png" height="35" width="33">Tech solution</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span> </button> 
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel"> 
-        <div class="offcanvas-header"> <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Check our menu</h5> <button type="button" 
-            class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button> </div> <div class="offcanvas-body"> 
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3"> <li class="nav-item">
-     <a class="nav-link active" aria-current="page" href="index.html">Home</a> 
-    </li> <li class="nav-item"> <a class="nav-link" href="index about.html">About</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Index Service.html">Services</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Our Staff.html">Our staffs</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="Projucts.html">Our products</a> </li>
-     <li class="nav-item"> <a class="nav-link" href="Policy.html">Policy</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact Us</a> </li>
-    <input class="form-control me-2" 
-    type="search" placeholder="Search" aria-label="Search"> <button class="btn btn-outline-success" type="submit"> <a href="https://www.google.com.">Search</a></button> </form> </div> </div> </div> </nav>
-   </header>
-    
+    <header>
+        <div class="container">
+            <h1 class="logo">Tech Bridge LIberia-TBL</h1>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./index about.html">About</a></li>
+                    <li><a href="./Index Service.html">Services</a></li>
+                    <li><a href="./Our Staff.html">Our Staffs</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                    <li><a href="./Policy.html">Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h3 class="Staff">Staff Information</h3>
-    <div class="staff-list">
-        <div class="staff-box">
-            <img src=".///image file/E Jerry.png" alt="Mr. Emmanuel Jerry Jr" class="staff-img">
-            <div class="staff-info">
-                <div class="staff-name">Mr. Emmanuel Jerry Jr</div>
-                <div class="staff-role">Founder/Technician</div>
-                <p><h3>Profile</h3>
-                  <ul>
-                    <li>Studying Data Science--University of Liberia</li>
-                    <li>Computer Science teacher at CIPS</li>
-                    <li><a href="https://jerry2001397.github.io/Resume/">Read More About Mr. Jerry</a></li>
-                  </ul>
-                </p>
+    <main>
+        <!-- Staff Hero Section -->
+        <section class="staff-hero">
+            <div class="container">
+                <h1>Our Professional Team</h1>
+                <p>Meet the talented professionals behind Tech Bridge Liberia's success and innovation</p>
             </div>
-        </div>
-        <div class="staff-box">
-            <img src=".///image file/FReeman.png" alt="Mr. John S Freeman" class="staff-img">
-            <div class="staff-info">
-                <div class="staff-name">Mr. John S Freeman</div>
-                <div class="staff-role">Co-founder/Technician</div>
-                <p>
-                  <h3>Profile</h3>
-                  <ur>
-                    <li>Studying Software Engineering--University of Liberia</li>
-                    <li>Head of IT deparment-Redemption Pharmacy</li>
-                  </ur>
-                </p>
+        </section>
+
+        <!-- Staff Members Section -->
+        <section class="staff-section">
+            <div class="container">
+                <div class="staff-grid">
+                    <!-- Team Member 1 -->
+                    <article class="staff-card">
+                        <div class="staff-card-image">
+                            <img src="./image file/E Jerry.png" alt="Mr. Emmanuel Jerry Jr" class="staff-photo">
+                            <div class="staff-overlay">
+                                <div class="social-links">
+                                    <a href="https://jerry2001397.github.io/Resume/" target="_blank" title="View Resume">Resume</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-card-content">
+                            <h3 class="staff-name">Mr. Emmanuel Jerry Jr</h3>
+                            <p class="staff-role">Founder & Lead Technician</p>
+                            <div class="staff-details">
+                                <ul>
+                                    <li>Data Science Student - University of Liberia</li>
+                                    <li>Computer Science Instructor - CIPS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Team Member 2 -->
+                    <article class="staff-card">
+                        <div class="staff-card-image">
+                            <img src="./image file/FReeman.png" alt="Mr. John S Freeman" class="staff-photo">
+                            <div class="staff-overlay">
+                                <div class="social-links">
+                                    <a href="#contact" title="Contact">Get in Touch</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-card-content">
+                            <h3 class="staff-name">Mr. John S Freeman</h3>
+                            <p class="staff-role">Co-founder & Technician</p>
+                            <div class="staff-details">
+                                <ul>
+                                    <li>Software Engineering Student - University of Liberia</li>
+                                    <li>Head of IT Department - Redemption Pharmacy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Team Member 3 -->
+                    <article class="staff-card">
+                        <div class="staff-card-image">
+                            <img src="./image file/George.png" alt="Mr. Wisdom George" class="staff-photo">
+                            <div class="staff-overlay">
+                                <div class="social-links">
+                                    <a href="./Contact.html" title="Contact">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-card-content">
+                            <h3 class="staff-name">Mr. Wisdom George</h3>
+                            <p class="staff-role">Staff Member & Technician</p>
+                            <div class="staff-details">
+                                <ul>
+                                    <li>Data Clerk - Redemption Pharmacy</li>
+                                    <li>Software Technician</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tech Bridge LIberia-TBL<br>
+                All rights reserved.</p>
         </div>
-        <div class="staff-box">
-            <img src=".///image file/George.png" alt="Mr. Wisdom George" class="staff-img">
-            <div class="staff-info">
-                <div class="staff-name">Mr. Wisdom George</div>
-                <div class="staff-role">Staff Member</div>
-                <p><h3>Profile</h3>
-                  <U>
-                    <li>Data Clack at Redemption</li>
-                    <li>Software Technician</li>
-                    <li><a href="Contact.html">Contact</a></li>
-                  </U>
-                </p>
-            </div>
-        </div>
-    </div>
-    <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg> </a> </div> </div> </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
- integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

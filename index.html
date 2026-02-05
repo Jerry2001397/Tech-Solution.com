@@ -8,64 +8,95 @@
 </head>
 <body>
     <header>
-        <div class="feature-container">
+        <div class="container">
             <h1 class="logo">Tech Bridge LIberia-TBL</h1>
-            </header>
-            <nav class="nav-links">
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                 <li></li><a href="./index about.html">About</a></li>
-                </li><a href="./Index Service.html">Services</a></li>
-                </li><a href="./Our Staff.html">Our Staffs</a></li>
-                </li><a href="./Contact.html">Contact</a></li>
-                 </li><a href="./Policy.html">Policy</a></li>
-           </ul>
-
-          </nav>
-         </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./index about.html">About</a></li>
+                    <li><a href="./Index Service.html">Services</a></li>
+                    <li><a href="./Our Staff.html">Our Staffs</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                    <li><a href="./Policy.html">Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     
     <main>
         <section class="hero">
             <div class="container">
-                <h2>Welcome to Tech Bridge LIberia-TBL</h2>
-                <p>Your trusted partner for innovative technology solutions.</p>
-                <a href="./index about.html" class="cta-btn">Learn More</a>
-                <br>
-                <br>
-                <br>
-                <a href="./JoinUs.html" style="padding: 10px 20px; background: #007bff; color: white; border-radius: 4px; text-decoration: none; display: inline-block;">JOIN US</a>
+                <h2>Welcome to Tech Bridge Liberia</h2>
+                <p>Your trusted partner for innovative technology solutions and professional services.</p>
+                <div>
+                    <a href="./index about.html" class="cta-btn">Learn More</a>
+                    <a href="./JoinUs.html" class="cta-btn secondary">Join Us</a>
+                </div>
             </div>
         </section>
         <section class="features">
-   <div class="container">
-  <div class="feature">
+            <div class="features-wrapper">
+                <div class="feature">
+                    <div class="feature-icon">💻</div>
                     <h3>Computer Basics Training</h3>
-                    <p>We offer foundational training in computer literacy, <br>
-                ensuring learners gain essential skills in Computer science.</p>
-</div>
-<div class="feature">
+                    <p>We offer foundational training in computer literacy, ensuring learners gain essential skills in Computer science.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📹</div>
                     <h3>CCTV Cameras Installation</h3>
                     <p>We provide professional CCTV surveillance system installation for homes, businesses, and institutions.</p>
-  </div>
-<div class="feature">
-                    <h3>Hardware and Software Troubleshooting</h3>
-                    <p>Our expert technicians diagnose and resolve issues in computer hardware and software,<br>
-                    providing reliable support to restore system functionality.<br></p>
                 </div>
-                 <div class="feature">
-                    <h3>Access Database Development for Institutions</h3>
-                    <p>We develop tailored Microsoft Access databases for schools, clinics, organizations, <br>
-                and other institutions to manage ,<br>
-                    providing reliable support to restore system functionality.<br></p>
-            </div> 
+                <div class="feature">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Hardware and Software Troubleshooting</h3>
+                    <p>Our expert technicians diagnose and resolve issues in computer hardware and software, providing reliable support.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Access Database Development</h3>
+                    <p>We develop tailored Microsoft Access databases for schools, clinics, and organizations to manage data efficiently.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>Data Collection and Analysis</h3>
+                    <p>We offer data collection and analysis services to help organizations make informed decisions based on accurate insights.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Social Media Management and marketing </h3
+                    <p>We provide comprehensive social media management and marketing services to enhance your online presence and engagement.</p>
             </div>
         </section>
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2025 Tech Bridge LIberia-TBL<br>
+            <p>&copy; 2026 Tech Bridge LIberia-TBL<br>
                  All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,336 @@
+/* ===================================
+   STAFF PAGE STYLES
+   Professional Team Showcase
+   =================================== */
+
+/* ===================================
+   STAFF HERO SECTION
+   =================================== */
+.staff-hero {
+  background: linear-gradient(135deg, var(--primary-color), #1a4d7a);
+  color: var(--bg-white);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.staff-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.staff-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: rgba(233, 69, 96, 0.08);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.staff-hero .container {
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.staff-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.staff-hero p {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 600px;
+  font-weight: 300;
+}
+
+/* ===================================
+   STAFF SECTION
+   =================================== */
+.staff-section {
+  padding: 80px 20px;
+  background: var(--bg-light);
+}
+
+.staff-section .container {
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ===================================
+   STAFF GRID
+   =================================== */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ===================================
+   STAFF CARD
+   =================================== */
+.staff-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Staff Card Image */
+.staff-card-image {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.staff-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.staff-card:hover .staff-photo {
+  transform: scale(1.05);
+}
+
+/* Staff Overlay */
+.staff-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 52, 96, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.staff-card:hover .staff-overlay {
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links a {
+  background: var(--secondary-color);
+  color: var(--bg-white);
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--secondary-color);
+}
+
+.social-links a:hover {
+  background: transparent;
+  color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);
+}
+
+/* Staff Card Content */
+.staff-card-content {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.staff-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.staff-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.staff-details {
+  margin-top: 12px;
+  flex-grow: 1;
+}
+
+.staff-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.staff-details li {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.staff-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 1024px) {
+  .staff-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .staff-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .staff-hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .staff-section {
+    padding: 60px 20px;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .staff-hero {
+    padding: 60px 20px;
+  }
+
+  .staff-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .staff-hero p {
+    font-size: 1rem;
+  }
+
+  .staff-card-image {
+    height: 280px;
+  }
+
+  .staff-card-content {
+    padding: 24px 20px;
+  }
+
+  .staff-name {
+    font-size: 1.2rem;
+  }
+
+  .staff-role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-section {
+    padding: 40px 16px;
+  }
+
+  .staff-hero {
+    padding: 40px 16px;
+  }
+
+  .staff-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .staff-hero p {
+    font-size: 0.95rem;
+  }
+
+  .staff-grid {
+    gap: 20px;
+  }
+
+  .staff-card-image {
+    height: 240px;
+  }
+
+  .staff-card-content {
+    padding: 20px 16px;
+  }
+
+  .staff-name {
+    font-size: 1.1rem;
+  }
+
+  .staff-details li {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  .staff-card,
+  .staff-photo,
+  .staff-overlay,
+  .social-links a {
+    transition: none !important;
+  }
+}
