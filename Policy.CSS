@@ -162,8 +162,9 @@
 
 .section-body p {
   margin-bottom: 16px;
-  font-size: 1rem;
-  color: var(--text-light);
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 600;
 }
 
 .section-body p:last-child {
@@ -188,8 +189,9 @@
 
 .subsection p {
   margin: 0;
-  color: var(--text-light);
-  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-size: 1.03rem;
+  font-weight: 600;
 }
 
 /* Policy Lists */
@@ -202,8 +204,9 @@
 .policy-list li {
   padding: 10px 0 10px 28px;
   position: relative;
-  color: var(--text-light);
-  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-size: 1.02rem;
+  font-weight: 600;
 }
 
 .policy-list li::before {
@@ -245,9 +248,10 @@
 
 .conduct-item p {
   margin: 0;
-  color: var(--text-light);
-  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-size: 1.02rem;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 /* Penalties Table */
@@ -292,7 +296,8 @@
 
 .penalty-category .policy-list li {
   padding: 8px 0 8px 24px;
-  font-size: 0.95rem;
+  font-size: 1.02rem;
+  font-weight: 600;
 }
 
 .penalty-category .policy-list li::before {
@@ -317,10 +322,11 @@
 }
 
 .policy-acknowledgment p {
-  color: var(--text-light);
-  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .policy-acknowledgment p:last-child {
