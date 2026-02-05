@@ -33,7 +33,7 @@ html {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   color: var(--text-dark);
-  background: var(--bg-light);
+  background: var(--bg-white);
   min-height: 100vh;
   line-height: 1.6;
   font-weight: 400;

@@ -69,7 +69,7 @@ body {
    =================================== */
 header {
   background: var(--bg-white);
-  padding: 16px 0;
+  padding: 8px 0;
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
@@ -196,6 +196,7 @@ nav {
   text-align: center;
   position: relative;
   overflow: hidden;
+  margin-top: 0;
 }
 
 .hero::before {
@@ -868,7 +869,7 @@ footer a:hover {
   }
 
   .nav-links li a:hover {
-    background: var(--bg-light);
+    background: rgba(233, 69, 96, 0.08);
   }
 
   /* Hero */
