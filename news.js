@@ -74,6 +74,40 @@ function renderNewsList() {
     content.innerHTML = item.content;
     article.appendChild(content);
 
+    const actions = document.createElement('div');
+    actions.className = 'news-actions';
+
+    const link = document.createElement('a');
+    link.className = 'news-link';
+    link.href = 'News.html#' + encodeURIComponent(item.id);
+    link.innerText = 'Share link';
+    actions.appendChild(link);
+
+    const copyBtn = document.createElement('button');
+    copyBtn.type = 'button';
+    copyBtn.className = 'copy-link-btn';
+    copyBtn.innerText = 'Copy link';
+    copyBtn.addEventListener('click', function() {
+      const url = link.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function() {
+          copyBtn.innerText = 'Copied!';
+          setTimeout(function() { copyBtn.innerText = 'Copy link'; }, 1200);
+        });
+      } else {
+        const temp = document.createElement('input');
+        temp.value = url;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        copyBtn.innerText = 'Copied!';
+        setTimeout(function() { copyBtn.innerText = 'Copy link'; }, 1200);
+      }
+    });
+    actions.appendChild(copyBtn);
+    article.appendChild(actions);
+
     list.appendChild(article);
   });
 }
