@@ -169,6 +169,54 @@
                 menuToggle.classList.remove('active');
             });
         });
+
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const SUPABASE_URL = 'https://tvjnltngvvzjxlmluyya.supabase.co';
+                const SUPABASE_ANON_KEY = 'sb_publishable_YVZtUhus7A-766HDz7ZpVw_I7bSZ7ac';
+                const EMAIL_WEBHOOK_URL = 'https://tvjnltngvvzjxlmluyya.supabase.co/functions/v1/send-booking-email';
+
+                const payload = {
+                    full_name: document.getElementById('name').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    service_type: document.getElementById('service').value
+                };
+
+                try {
+                    const response = await fetch(SUPABASE_URL + '/rest/v1/booking_requests', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'apikey': SUPABASE_ANON_KEY,
+                            'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+                            'Prefer': 'return=representation'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Submission failed');
+                    }
+
+                    if (EMAIL_WEBHOOK_URL) {
+                        fetch(EMAIL_WEBHOOK_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                    }
+
+                    alert('Thanks! Your booking request has been submitted.');
+                    bookingForm.reset();
+                } catch (error) {
+                    alert('Sorry, we could not submit your request. Please try again.');
+                }
+            });
+        }
     </script>
     <script src="./news-data.js"></script>
     <script src="./news.js"></script>
