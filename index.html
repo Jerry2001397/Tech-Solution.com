@@ -205,11 +205,19 @@
                     }
 
                     if (EMAIL_WEBHOOK_URL) {
-                        fetch(EMAIL_WEBHOOK_URL, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
+                        try {
+                            const emailResponse = await fetch(EMAIL_WEBHOOK_URL, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(payload)
+                            });
+                            if (!emailResponse.ok) {
+                                const emailError = await emailResponse.text();
+                                console.error('Email webhook error', emailResponse.status, emailError);
+                            }
+                        } catch (emailError) {
+                            console.error('Email webhook failed', emailError);
+                        }
                     }
 
                     alert('Thanks! Your booking request has been submitted.');
