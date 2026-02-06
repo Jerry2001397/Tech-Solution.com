@@ -56,14 +56,14 @@ function renderNewsList() {
   const adminSection = document.getElementById('newsAdmin');
   if (adminSection) {
     if (hashId) {
+      adminSection.classList.add('single-view-hidden');
       adminSection.classList.remove('gate-visible', 'unlocked');
-      adminSection.style.display = 'none';
-      adminSection.style.visibility = 'hidden';
     } else {
-      adminSection.style.display = '';
-      adminSection.style.visibility = '';
-      if (typeof createAdminGate === 'function' && !adminSection.classList.contains('gate-visible') && !adminSection.classList.contains('unlocked')) {
-        createAdminGate();
+      adminSection.classList.remove('single-view-hidden');
+      if (!adminSection.classList.contains('gate-visible') && !adminSection.classList.contains('unlocked')) {
+        if (typeof createAdminGate === 'function') {
+          createAdminGate();
+        }
       }
     }
   }
