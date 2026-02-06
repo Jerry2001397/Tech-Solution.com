@@ -33,6 +33,31 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
+
+        .toast {
+            position: fixed;
+            right: 20px;
+            bottom: 24px;
+            background: #0f3460;
+            color: #fff;
+            padding: 14px 18px;
+            border-radius: 10px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+            transform: translateY(20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 9999;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.success { background: #1f7a3a; }
+        .toast.error { background: #b02a37; }
     </style>
 </head>
 <body>
@@ -59,6 +84,7 @@
     </header>
     <!-- News ticker (populated from news-data.js) -->
     <div id="newsTicker" aria-live="polite" role="region"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
     
     <main>
         <section class="hero">
@@ -170,6 +196,17 @@
             });
         });
 
+        function showToast(message, type) {
+            const toast = document.getElementById('toast');
+            if (!toast) return;
+            toast.textContent = message;
+            toast.className = 'toast show ' + (type || '');
+            clearTimeout(showToast.hideTimer);
+            showToast.hideTimer = setTimeout(() => {
+                toast.className = 'toast ' + (type || '');
+            }, 3000);
+        }
+
         const bookingForm = document.getElementById('bookingForm');
         if (bookingForm) {
             bookingForm.addEventListener('submit', async function(e) {
@@ -224,11 +261,11 @@
                         }
                     }
 
-                    alert('Thanks! Your booking request has been submitted.');
+                    showToast('Thanks! Your booking request has been submitted.', 'success');
                     bookingForm.reset();
                 } catch (error) {
                     console.error(error);
-                    alert('Sorry, we could not submit your request. ' + (error && error.message ? error.message : 'Please try again.'));
+                    showToast('Sorry, we could not submit your request. ' + (error && error.message ? error.message : 'Please try again.'), 'error');
                 }
             });
         }
