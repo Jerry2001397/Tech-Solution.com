@@ -18,6 +18,12 @@ function getNewsItems() {
   return window.NEWS_ITEMS || [];
 }
 
+function getShareUrl(itemId) {
+  const origin = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : '';
+  const basePath = window.location.pathname.replace(/\/[^\/]*$/, '');
+  return origin + basePath + '/news/' + encodeURIComponent(itemId) + '.html';
+}
+
 function renderTicker(maxItems = 5) {
   const container = document.getElementById('newsTicker');
   if (!container) return;
@@ -104,7 +110,7 @@ function renderNewsList() {
     link.innerText = 'Copy link';
     link.style.cursor = 'pointer';
     link.addEventListener('click', function() {
-      const url = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '') + '/News.html#' + encodeURIComponent(item.id);
+      const url = getShareUrl(item.id);
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(function() {
           const originalText = link.innerText;
@@ -129,7 +135,7 @@ function renderNewsList() {
     copyBtn.className = 'copy-link-btn';
     copyBtn.innerText = 'Share';
     copyBtn.addEventListener('click', function() {
-      const url = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '') + '/News.html#' + encodeURIComponent(item.id);
+      const url = getShareUrl(item.id);
       const shareData = {
         title: item.title,
         text: item.title + ' — ' + item.date,
