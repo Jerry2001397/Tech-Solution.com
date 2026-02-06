@@ -46,7 +46,14 @@ function renderNewsList() {
   const list = document.getElementById('newsList');
   if (!list) return;
   list.innerHTML = '';
-  getNewsItems().forEach(item => {
+  const hashId = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : '';
+  const items = getNewsItems();
+  const visibleItems = hashId ? items.filter(item => item.id === hashId) : items;
+  const showAllBtn = document.getElementById('showAllNews');
+  if (showAllBtn) {
+    showAllBtn.style.display = hashId ? 'inline-flex' : 'none';
+  }
+  visibleItems.forEach(item => {
     const article = document.createElement('article');
     article.id = item.id;
     article.className = 'news-article';
@@ -86,13 +93,32 @@ function renderNewsList() {
     const copyBtn = document.createElement('button');
     copyBtn.type = 'button';
     copyBtn.className = 'copy-link-btn';
-    copyBtn.innerText = 'Copy link';
+    copyBtn.innerText = 'Share';
     copyBtn.addEventListener('click', function() {
       const url = link.href;
+      const shareData = {
+        title: item.title,
+        text: item.title + ' — ' + item.date,
+        url: url
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData).catch(function() {
+          // Fall back to copy if share is cancelled or fails
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function() {
+              copyBtn.innerText = 'Copied!';
+              setTimeout(function() { copyBtn.innerText = 'Share'; }, 1200);
+            });
+          }
+        });
+        return;
+      }
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(function() {
           copyBtn.innerText = 'Copied!';
-          setTimeout(function() { copyBtn.innerText = 'Copy link'; }, 1200);
+          setTimeout(function() { copyBtn.innerText = 'Share'; }, 1200);
         });
       } else {
         const temp = document.createElement('input');
@@ -102,7 +128,7 @@ function renderNewsList() {
         document.execCommand('copy');
         document.body.removeChild(temp);
         copyBtn.innerText = 'Copied!';
-        setTimeout(function() { copyBtn.innerText = 'Copy link'; }, 1200);
+        setTimeout(function() { copyBtn.innerText = 'Share'; }, 1200);
       }
     });
     actions.appendChild(copyBtn);
@@ -141,4 +167,16 @@ function deleteNewsItem(itemId) {
 document.addEventListener('DOMContentLoaded', function() {
   renderTicker();
   renderNewsList();
+
+  const showAllBtn = document.getElementById('showAllNews');
+  if (showAllBtn) {
+    showAllBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (window.location.hash) {
+        history.replaceState(null, document.title, window.location.pathname);
+      }
+      renderNewsList();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });

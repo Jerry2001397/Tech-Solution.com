@@ -27,6 +27,7 @@
       padding: 80px 20px;
       text-align: center;
       box-shadow: var(--shadow-md);
+      position: relative;
     }
 
     .news-hero h1 {
@@ -96,12 +97,47 @@
       transform: translateY(-50%) scale(0.95);
     }
 
+    .show-all-news {
+      position: absolute;
+      top: 22px;
+      left: 30px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.25) 0%, rgba(255, 255, 255, 0.2) 100%);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      z-index: 5;
+    }
+
+    .show-all-news:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(0, 212, 255, 0.35);
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
     @media (max-width: 768px) {
       .back-to-home {
         width: 45px;
         height: 45px;
         font-size: 20px;
         left: 20px;
+      }
+
+      .show-all-news {
+        left: 20px;
+        top: 16px;
+        font-size: 0.85rem;
+        padding: 8px 12px;
       }
     }
 
@@ -701,6 +737,7 @@
 
   <!-- News Hero Section -->
   <section class="news-hero">
+    <a href="News.html" class="show-all-news" id="showAllNews" aria-label="Show all news">Show all</a>
     <a href="index.html" class="back-to-home" title="Back to Home" aria-label="Back to Home">←</a>
     <h1>Latest News & Updates</h1>
     <p>Stay informed about the latest developments, announcements, and updates from Tech Bridge Liberia</p>
