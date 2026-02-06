@@ -19,7 +19,7 @@ function getNewsItems() {
 }
 
 function getShareUrl(itemId) {
-  const baseUrl = 'https://jerry2001397.github.io/Tech-Bridge-Liberia-TBL';
+  const baseUrl = 'https://tech-bridge-liberia-tbl.vercel.app';
   return baseUrl + '/news/' + encodeURIComponent(itemId) + '.html';
 }
 
