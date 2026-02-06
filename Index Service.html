@@ -6,6 +6,34 @@
   <title>Our Services - Tech Bridge Liberia</title>
   <link rel="stylesheet" href="./Style.CSS">
   <style>
+    /* News ticker styles */
+    #newsTicker {
+        overflow: hidden;
+        background: #111;
+        color: #fff;
+        padding: 8px 0;
+        font-size: 16px;
+    }
+    .ticker-inner {
+        display: inline-block;
+        white-space: nowrap;
+        will-change: transform;
+        animation: scroll 18s linear infinite;
+    }
+    .ticker-item {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 12px;
+        padding: 0 6px;
+    }
+    .ticker-item:hover { text-decoration: underline; }
+    .ticker-sep { color: #888; margin-right: 12px; }
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
     /* Services Page Specific Styles */
     .services-hero {
       background: linear-gradient(135deg, var(--primary-color) 0%, #1a4d7a 100%);
@@ -506,11 +534,15 @@
           <li><a href="./Index Service.html">Services</a></li>
           <li><a href="./Our Staff.html">Our Staffs</a></li>
           <li><a href="./Contact.html">Contact</a></li>
-          <li><a href="./Policy.html">Policy</a></li>
-        </ul>
+            <li><a href="./News.html">News</a></li>
+            <li><a href="./Policy.html">Policy</a></li>
+          </ul>
       </nav>
     </div>
   </header>
+
+  <!-- News ticker (populated from news-data.js) -->
+  <div id="newsTicker" aria-live="polite" role="region"></div>
 
   <main>
     <!-- Services Hero Section -->
@@ -630,5 +662,6 @@
       });
     });
   </script>
+  <script src="./active-nav.js"></script>
 </body>
 </html>
