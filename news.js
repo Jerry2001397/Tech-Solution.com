@@ -56,12 +56,13 @@ function renderNewsList() {
   const adminSection = document.getElementById('newsAdmin');
   if (adminSection) {
     if (hashId) {
+      adminSection.classList.remove('gate-visible', 'unlocked');
       adminSection.style.display = 'none';
       adminSection.style.visibility = 'hidden';
     } else {
       adminSection.style.display = '';
       adminSection.style.visibility = '';
-      if (typeof createAdminGate === 'function') {
+      if (typeof createAdminGate === 'function' && !adminSection.classList.contains('gate-visible') && !adminSection.classList.contains('unlocked')) {
         createAdminGate();
       }
     }
@@ -97,10 +98,30 @@ function renderNewsList() {
     const actions = document.createElement('div');
     actions.className = 'news-actions';
 
-    const link = document.createElement('a');
+    const link = document.createElement('button');
+    link.type = 'button';
     link.className = 'news-link';
-    link.href = 'News.html#' + encodeURIComponent(item.id);
-    link.innerText = 'Share link';
+    link.innerText = 'Copy link';
+    link.style.cursor = 'pointer';
+    link.addEventListener('click', function() {
+      const url = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '') + '/News.html#' + encodeURIComponent(item.id);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function() {
+          const originalText = link.innerText;
+          link.innerText = 'Copied!';
+          setTimeout(function() { link.innerText = originalText; }, 1200);
+        });
+      } else {
+        const temp = document.createElement('input');
+        temp.value = url;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        link.innerText = 'Copied!';
+        setTimeout(function() { link.innerText = 'Copy link'; }, 1200);
+      }
+    });
     actions.appendChild(link);
 
     const copyBtn = document.createElement('button');
@@ -108,7 +129,7 @@ function renderNewsList() {
     copyBtn.className = 'copy-link-btn';
     copyBtn.innerText = 'Share';
     copyBtn.addEventListener('click', function() {
-      const url = link.href;
+      const url = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '') + '/News.html#' + encodeURIComponent(item.id);
       const shareData = {
         title: item.title,
         text: item.title + ' — ' + item.date,
