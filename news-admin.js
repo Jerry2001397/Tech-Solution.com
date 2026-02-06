@@ -11,12 +11,22 @@ function buildAdminForm(container) {
   closeBtn.className = 'admin-close-btn';
   closeBtn.innerHTML = '&times;';
   closeBtn.title = 'Close admin panel';
+  closeBtn.setAttribute('aria-label', 'Close admin panel');
+  closeBtn.tabIndex = 0;
   closeBtn.addEventListener('click', function() {
     sessionStorage.removeItem('news_admin_unlocked');
     container.classList.remove('unlocked');
     container.classList.add('gate-visible');
     container.innerHTML = '';
     createAdminGate();
+  });
+
+  // Keyboard support: Enter, Space or Escape when focused
+  closeBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.key === 'Escape') {
+      e.preventDefault();
+      closeBtn.click();
+    }
   });
   wrapper.appendChild(closeBtn);
 
