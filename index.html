@@ -199,7 +199,9 @@
                     });
 
                     if (!response.ok) {
-                        throw new Error('Submission failed');
+                        const errorText = await response.text();
+                        console.error('Supabase error', response.status, errorText);
+                        throw new Error('Submission failed: ' + response.status + ' ' + errorText);
                     }
 
                     if (EMAIL_WEBHOOK_URL) {
@@ -213,7 +215,8 @@
                     alert('Thanks! Your booking request has been submitted.');
                     bookingForm.reset();
                 } catch (error) {
-                    alert('Sorry, we could not submit your request. Please try again.');
+                    console.error(error);
+                    alert('Sorry, we could not submit your request. ' + (error && error.message ? error.message : 'Please try again.'));
                 }
             });
         }
