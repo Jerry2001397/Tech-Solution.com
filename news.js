@@ -19,9 +19,8 @@ function getNewsItems() {
 }
 
 function getShareUrl(itemId) {
-  const origin = (window.location.origin && window.location.origin !== 'null') ? window.location.origin : '';
-  const basePath = window.location.pathname.replace(/\/[^\/]*$/, '');
-  return origin + basePath + '/news/' + encodeURIComponent(itemId) + '.html';
+  const baseUrl = 'https://jerry2001397.github.io/Tech-Bridge-Liberia-TBL';
+  return baseUrl + '/news/' + encodeURIComponent(itemId) + '.html';
 }
 
 function renderTicker(maxItems = 5) {
