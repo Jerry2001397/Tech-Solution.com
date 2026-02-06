@@ -53,6 +53,19 @@ function renderNewsList() {
   if (showAllBtn) {
     showAllBtn.style.display = hashId ? 'inline-flex' : 'none';
   }
+  const adminSection = document.getElementById('newsAdmin');
+  if (adminSection) {
+    if (hashId) {
+      adminSection.style.display = 'none';
+      adminSection.style.visibility = 'hidden';
+    } else {
+      adminSection.style.display = '';
+      adminSection.style.visibility = '';
+      if (typeof createAdminGate === 'function') {
+        createAdminGate();
+      }
+    }
+  }
   visibleItems.forEach(item => {
     const article = document.createElement('article');
     article.id = item.id;

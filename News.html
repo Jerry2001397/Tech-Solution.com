@@ -63,40 +63,7 @@
       line-height: 1.6;
     }
 
-    /* Back to Home Button */
-    .back-to-home {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      color: white;
-      text-decoration: none;
-      font-size: 24px;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      backdrop-filter: blur(10px);
-      position: absolute;
-      left: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .back-to-home:hover {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
-      border-color: rgba(255, 255, 255, 0.6);
-      transform: translateY(-50%) translateX(-5px);
-      box-shadow: 0 12px 40px rgba(0, 212, 255, 0.3);
-    }
-
-    .back-to-home:active {
-      transform: translateY(-50%) scale(0.95);
-    }
-
+    /* Show all icon */
     .show-all-news {
       position: absolute;
       top: 22px;
@@ -104,19 +71,25 @@
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
       background: linear-gradient(135deg, rgba(0, 212, 255, 0.25) 0%, rgba(255, 255, 255, 0.2) 100%);
       border: 2px solid rgba(255, 255, 255, 0.5);
-      color: white;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.2px;
       box-shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
       backdrop-filter: blur(10px);
       transition: all 0.3s ease;
       z-index: 5;
+    }
+
+    .show-all-news::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 2px;
+      box-shadow: 12px 0 0 white, 0 12px 0 white, 12px 12px 0 white;
     }
 
     .show-all-news:hover {
@@ -126,18 +99,11 @@
     }
 
     @media (max-width: 768px) {
-      .back-to-home {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-        left: 20px;
-      }
-
       .show-all-news {
         left: 20px;
         top: 16px;
-        font-size: 0.85rem;
-        padding: 8px 12px;
+        width: 42px;
+        height: 42px;
       }
     }
 
@@ -737,8 +703,7 @@
 
   <!-- News Hero Section -->
   <section class="news-hero">
-    <a href="News.html" class="show-all-news" id="showAllNews" aria-label="Show all news">Show all</a>
-    <a href="index.html" class="back-to-home" title="Back to Home" aria-label="Back to Home">←</a>
+    <a href="News.html" class="show-all-news" id="showAllNews" aria-label="Show all news" title="Show all news"></a>
     <h1>Latest News & Updates</h1>
     <p>Stay informed about the latest developments, announcements, and updates from Tech Bridge Liberia</p>
   </section>
